@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class Home {
     @GetMapping(value= "/")
-    public String getDemoData() {
-        return "Welcome to tourstories.com";
+    public String getHome() {
+        return "Welcome to tourstories.com to help your travelling ";
     }
 
 }
