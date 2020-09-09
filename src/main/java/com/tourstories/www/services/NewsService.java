@@ -1,6 +1,6 @@
 package com.tourstories.www.services;
 
-import com.tourstories.www.entities.News;
+import com.tourstories.www.Model.News;
 
 import java.util.List;
 

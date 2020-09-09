@@ -1,13 +1,15 @@
-package com.tourstories.www.services;
-import com.tourstories.www.entities.News;
+package com.tourstories.www.services.impl;
+import com.tourstories.www.Model.News;
+import com.tourstories.www.services.NewsService;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 // Spring will identify -  NewServiceImpl  is a service class on this project
 @Service
-public class NewServiceImpl implements  NewsService{
+public class NewServiceImpl implements NewsService {
     List<News> list;
 
     public NewServiceImpl(){
@@ -16,6 +18,32 @@ public class NewServiceImpl implements  NewsService{
         list.add(new News(1," Wuhan East lake", "Wuhan east lake is one of the longest lake in the world", "Sajib Chakma"));
         list.add(new News(3," Wuhan Botenical Garden", "Wuhan Botenical Garden is one of the beatiful garden in the world", "Sajib Chakma"));
     }
+
+    public class Family{
+
+        public Family(){
+            super();
+        }
+        private String name;
+
+        public String getName(){
+            return this.name;
+        }
+
+        public void setName(String name){
+            this.name = name;
+        }
+
+    }
+
+
+    String[] names = {"Sajib","rajib","paban"};
+    List<Family> member = new ArrayList<Family>();
+
+
+
+
+
 
     @Override
     public List<News> getAllNews() {
@@ -36,7 +64,6 @@ public class NewServiceImpl implements  NewsService{
     }
 
     // to post new news on list
-
     @Override
     public News addNews(News news) {
         list.add(news);

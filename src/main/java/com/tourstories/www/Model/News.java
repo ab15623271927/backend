@@ -1,4 +1,4 @@
-package com.tourstories.www.entities;
+package com.tourstories.www.Model;
 
 public class News {
  private  long id;
@@ -15,8 +15,6 @@ public class News {
     }
 
     // default constructor
-
-
     public News() {
         super();
     }
